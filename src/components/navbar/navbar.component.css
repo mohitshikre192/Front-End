@@ -46,16 +46,16 @@ button {
     cursor: pointer;
 }
 
+
 a{
 text-transform: capitalize;
 text-decoration: none;
 color:aliceblue;
 padding:20px 10px 20px 10px;
 }
-a:hover{
 
+a:hover{
     color:black;
     background-color: coral;
     padding:20px 10px 20px 10px;
-
 }

@@ -1,1 +1,35 @@
-<p>login works!</p>
+<body>
+    <div>
+        <h1>Login</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div>
+            <input type="text" formControlName="mobile" required>
+            <span></span>
+            <label>Mobile No</label>
+
+            </div>
+            
+            <div>
+                <input type="password" formControlName="password" required>
+                <span></span>
+                <label >Password</label>
+            </div>
+            <div>
+                <p> please select a role</p>
+                <input type="radio" formControlName="role" value="user" required>
+                    <label>User</label>
+                    <input type="radio" formControlName="role" value="driver" required>
+                    <label>Driver Partner</label>
+            </div>
+
+            <div class="pass">Forgot Password?</div>
+            <input type="submit"  value="Login">
+            <div class="signup_link">
+              Not a member? <a href="signup/">Signup</a>
+            </div>
+            <a class="btn btn-dark" href="/">back to home</a>
+        </form>
+
+    </div>
+
+</body>
