@@ -1,8 +1,8 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { throwError } from 'rxjs';
-
+import { Observable, catchError, throwError } from 'rxjs';
+import { Login } from '../app/models/login';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,14 +12,15 @@ error (error:any)
 {throw new Error("Method not implemented...");
 }
 
-public readonly getlogin ="";
+ //readonly getlogin ="https://localhost:7034/api/Login/";
   constructor(private http:HttpClient,private router: Router) { }
 
-public  getLoginT(mobile:string,password: string,role: string) :any
-{
-  return this.http.get(this.getlogin + "mobile=" + mobile+"&password="+password+"&role="+role);
-}
-
+// public getLoginT(login: Login):Observable<Login>
+// {
+//   let getlogin : string ="https://localhost:7034/api/Login/";
+ 
+// //  return this.http.post(getlogin, login);
+// }
 
 
 

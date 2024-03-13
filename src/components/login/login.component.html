@@ -1,9 +1,9 @@
-<body>
+
     <div>
         <h1>Login</h1>
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <!-- <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
             <div>
-            <input type="text" formControlName="mobile" required>
+            <input type="text" formControlName="mobile_no" required>
             <span></span>
             <label>Mobile No</label>
 
@@ -28,8 +28,36 @@
               Not a member? <a href="signup/">Signup</a>
             </div>
             <a class="btn btn-dark" href="/">back to home</a>
+        </form> -->
+
+        <form>
+            <div>
+            <input type="text" name= "mobile_no" [(ngModel)]="loginobj.mobile_no" placeholder="Enter your mobile no" required>
+            <span></span>
+            <label>Mobile No</label>
+
+            </div>
+            
+
+            <div>
+                <input type="password"  name= "password" [(ngModel)]="loginobj.password" placeholder="Enter your password here" required>
+                <span></span>
+                <label >Password</label>
+            </div>
+            <div>
+                <p> please select a role</p>
+                <input type="radio"  name= "role" [(ngModel)]="loginobj.role"value="user" required>
+                    <label>User</label>
+                    <input type="radio" name= "role" [(ngModel)]="loginobj.role" value="driver" required>
+                    <label>Driver Partner</label>
+            </div>
+
+            <div class="pass">Forgot Password?</div>
+            <button (click)="onLogin()"> Login </button>
+            <div class="signup_link">
+              Not a member? <a href="signup/">Signup</a>
+            </div>
+            <a class="btn btn-dark" href="/">back to home</a>
         </form>
 
     </div>
-
-</body>
