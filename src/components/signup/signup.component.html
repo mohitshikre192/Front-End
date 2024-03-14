@@ -1,1 +1,51 @@
-<p>signup works!</p>
+
+<form (submit)="CreateUser()">
+
+    <div>
+        <input type="text" name ="name" [(ngModel)]="user.name" placeholder="enter your name here">
+        <label >Name:</label>
+    </div>
+    <div>
+        <input type="radio" name ="role" [(ngModel)]="user.role" value="user" >
+        <label >user:</label>
+        <input type="radio" name ="role" [(ngModel)]="user.role" value="driver" >
+        <label >Driver Partner</label>
+    </div>
+    <div>
+       
+        <select type="number" name="gender" [(ngModel)]="user.gender"  required  >
+             <option value=0>Male</option>
+            <option value=1>Female</option>
+            <option value="others">others</option>
+
+        </select>
+        <label >Gender:</label>
+    </div>
+    <div>
+        <input type="text" name ="email" [(ngModel)]="user.email" placeholder="enter your mail id here">
+        <label >Email:</label>
+    </div>
+    <div>
+        <input type="text" name ="mobile_no" [(ngModel)]="user.mobile_no" placeholder="enter your mobile no">
+        <label >Mobile:</label>
+    </div>
+    <div>
+        <input type="date" name ="dob" [(ngModel)]="user.dob" placeholder="enter your DOB">
+        <label >Date of Birth</label>
+    </div>
+    <div>
+        <input type="text" name ="password" [(ngModel)]="user.password" placeholder="Create password">
+        <label >Password:</label>
+    </div>
+    <div>
+        <input type="text" name ="c_password" [(ngModel)]="user.c_password" placeholder="Confirm your password">
+        <label >Confirm Password:</label>
+    </div>
+
+    <div class="button">
+        <input type="submit" value="Register">
+          </div>
+
+
+
+</form>

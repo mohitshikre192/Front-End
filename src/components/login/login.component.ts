@@ -78,14 +78,14 @@ get f(){return this.loginForm.controls;}
 
 onLogin()
 {
-  //debugger;
+ 
   this.http.post('https://localhost:7034/api/Login/',this.loginobj)
 .subscribe({
-  next: () => {
-
-  
+  next: (data:any) => {
+   
+    debugger;
     alert('login success:');
-   // localStorage.setItem('loginToken')
+   localStorage.setItem('logintoken',data.token)
     this.router.navigateByUrl('/home');
   },error: () => {
 
