@@ -12,14 +12,15 @@
         <label >Driver Partner</label>
     </div>
     <div>
-       
-        <select type="number" name="gender" [(ngModel)]="user.gender"  required  >
+        <label >Gender:</label>
+        <!-- <select type="number" name="gender" [(ngModel)]="user.gender"  required  >
              <option value=0>Male</option>
             <option value=1>Female</option>
             <option value="others">others</option>
 
-        </select>
-        <label >Gender:</label>
+        </select> -->
+        <input type="number" name="gender"   [(ngModel)]="user.gender" checked> Male<br>
+        
     </div>
     <div>
         <input type="text" name ="email" [(ngModel)]="user.email" placeholder="enter your mail id here">
@@ -46,6 +47,9 @@
         <input type="submit" value="Register">
           </div>
 
-
+   
 
 </form>
+<div class="button">
+    <a href="/login">Login</a>
+ </div>
